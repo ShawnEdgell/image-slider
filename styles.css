@@ -1,0 +1,52 @@
+.carousel {
+    position: relative;
+    width: 800px;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: all 0.5s;
+    width: calc(800px * 3); /* Adjust this multiplier based on the number of slides */
+}
+
+.slide {
+    flex: 0 0 800px; 
+}
+
+/* ... rest of the CSS remains the same ... */
+
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: gray;
+    border-radius: 50%;
+    cursor: pointer;
+}
