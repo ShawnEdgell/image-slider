@@ -14,7 +14,8 @@ body {
 
 .carousel {
     position: relative;
-    width: 100%;
+    max-height: 100%;
+    width: auto;
     max-width: 800px;  /* max width */
     overflow: hidden;
 }
@@ -33,6 +34,13 @@ body {
         height: auto;  /* ensure the height resizes proportionally */
     }
 }
+
+.slide img {
+    max-height: 100%; /* Ensure the image doesn't exceed its container's height */
+    width: auto; /* Maintain the image's aspect ratio */
+}
+
+
 
 /* ... rest of the CSS remains the same ... */
 
@@ -73,4 +81,12 @@ body {
     background-color: gray;
     border-radius: 50%;
     cursor: pointer;
+}
+
+
+/* Mobile styles */
+@media (max-width: 768px) { /* adjust this breakpoint as per your requirements */
+    .carousel {
+        max-height: 50vh; /* You can set a different height for mobile here */
+    }
 }
